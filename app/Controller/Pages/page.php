@@ -35,6 +35,7 @@ class Page
             'Title' => $title,
             'Header' => self::getHeader(),
             'Content' => $content,
+            'Footer' => self::getFooter()
         ]);
     }
 
