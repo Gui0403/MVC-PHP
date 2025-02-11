@@ -17,6 +17,24 @@ class Page
     }
 
     /**
+     * Método responsável por renderizar o menu lateral da página
+     * @return string
+     */
+    private static function getAside()
+    {
+        return View::render("pages/Aside");
+    }
+
+    /**
+     * Método responsável por renderizar o conteúdo principal do página
+     * @return string
+     */
+    private static function getMain()
+    {
+        return View::render("pages/Main");
+    }
+
+    /**
      * Método responsável por renderizar o topo da página
      * @return string
      */
@@ -25,16 +43,18 @@ class Page
         return View::render("pages/footer");
     }
 
+
     /**
      * Método responsável por retornar o conteúdo da nossa home
      * @return string
      */
-    public static function getPage($title, $content)
+    public static function getPage($title, $main)
     {
         return View::render('pages/page', [
             'Title' => $title,
             'Header' => self::getHeader(),
-            'Content' => $content,
+            'Aside' => self::getAside(),
+            'Main' => $main,
             'Footer' => self::getFooter()
         ]);
     }
