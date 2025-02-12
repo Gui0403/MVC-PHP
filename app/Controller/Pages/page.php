@@ -22,16 +22,7 @@ class Page
      */
     private static function getAside()
     {
-        return View::render("pages/Aside");
-    }
-
-    /**
-     * Método responsável por renderizar o conteúdo principal do página
-     * @return string
-     */
-    private static function getMain()
-    {
-        return View::render("pages/Main");
+        return View::render("pages/aside");
     }
 
     /**
